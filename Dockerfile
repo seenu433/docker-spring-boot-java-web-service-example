@@ -15,4 +15,4 @@ COPY /target/docker-java-app-example.jar /app
 EXPOSE 8080
 
 # Run jar file when the container launches
-CMD ["java", "-jar", "docker-java-app-example.jar"]
+CMD ["java", "-javaagent:/data/agent/applicationinsights-agent-3.0.2.jar", "-jar", "docker-java-app-example.jar"]
